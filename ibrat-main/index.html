@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title> Animated images </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .topnav {
+            text-align: center;
+            padding: 5px;
+            /* background-color: burlywood; */
+        }
+
+        .center {
+            display: flex;
+            flex-direction: row;
+            /* text-align: center; */
+            margin-left: 33%;
+        }
+
+        .topnav a {
+            display: block;
+            padding: 20px;
+            text-align: center;
+            background-color: none;
+            color: rgb(39, 39, 39);
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .topnav a:hover {
+            background-color: none;
+            color: red;
+        }
+
+        .container {
+            margin-left: 2.5%;
+            margin-top: 2%;
+            width: 95%;
+            height: 65%;
+            display: flex;
+            flex-direction: row;
+            /* background-color: bisque; */
+            border-radius: 20px;
+        }
+
+        .col1 {
+            width: 33.5%;
+            padding: 15px;
+            background-image: url('images/strength.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 25px;
+            color: white;
+            font-weight: 100;
+        }
+
+        .col1:hover {
+            /* visibility: visible; */
+            animation-name: col1;
+            animation-duration: 0.7s;
+            animation-fill-mode: forwards;
+        }
+
+        .col2 {
+            width: 33.5%;
+            padding: 15px;
+            background-image: url('images/mobility.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 25px;
+            color: white;
+            font-weight: 100;
+        }
+
+        .col2:hover {
+            animation-name: col1;
+            animation-duration: 0.7s;
+            animation-fill-mode: forwards;
+        }
+
+        .col3 {
+            width: 33%;
+            padding: 15px;
+            background-image: url('images/drills.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 25px;
+            color: white;
+            font-weight: 100;
+        }
+
+        .col3:hover {
+            animation-name: col1;
+            animation-duration: 0.7s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes col1 {
+            from {
+                width: 33%;
+            }
+
+            to {
+                width: 80%;
+                background-size: cover;
+            }
+        }
+
+        .col-topnav {
+            width: 95%;
+            visibility: hidden;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-weight: 100;
+        }
+
+        #block {
+            margin-left: 4%;
+            padding: 20px;
+            /* width: 60px; */
+            height: 20px;
+            justify-content: space-between;
+            /* background-color: blue; */
+        }
+
+        #heading {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 45px;
+            font-weight: 100;
+            margin-left: 40px;
+            margin-top: 60px;
+        }
+
+        #arrowico {
+            margin-top: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="center">
+            <a href=# id="block"><i class="fas fa-video"></i><br>LIVE</a>
+            <a href="#" id="block"><i class="far fa-address-card"></i><br>MEMBERSHIP</a>
+            <a href="#" id="block"><i class="fas fa-running"></i><br>PLANS</a>
+            <a href="#" id="block"><i class="fas fa-ellipsis-v"></i><br>MORE</a>
+        </div>
+    </div>
+    <h1 id="heading"> Runner's Workout</h1>
+    <div class="container">
+
+        <div class="col1" onmouseover="arrowdisplay()" onmouseout="textdisplay()">
+            <h4 id="head">STRENGTH</h4>
+            <div class="col-topnav" id="arrowbox">
+                <h4>STRENGTH</h4>
+                <i class="fas fa-chevron-circle-right" id="arrowico"></i>
+            </div>
+        </div>
+        <div class="col2" onmouseover="arrowdisplay1()" onmouseout="textdisplay1()">
+            <h4 id="head1">MOBILITY</h4>
+            <div class="col-topnav" id="arrowbox1">
+                <h4>MOBILITY</h4>
+                <i class="fas fa-chevron-circle-right" id="arrowico"></i>
+            </div>
+        </div>
+        <div class="col3" onmouseover="arrowdisplay2()" onmouseout="textdisplay2()">
+            <h4 id="head2">DRILLS</h4>
+            <div class="col-topnav" id="arrowbox2">
+                <h4>DRILLS</h4>
+                <i class="fas fa-chevron-circle-right" id="arrowico"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function arrowdisplay() {
+            document.getElementById("head").style.display = 'none';
+            document.getElementById("arrowbox").style.visibility = 'visible';
+        }
+        function textdisplay() {
+            document.getElementById("head").style.display = 'block';
+            document.getElementById("arrowbox").style.visibility = 'hidden';
+        }
+        function arrowdisplay1() {
+            document.getElementById("head1").style.display = 'none';
+            document.getElementById("arrowbox1").style.visibility = 'visible';
+        }
+        function textdisplay1() {
+            document.getElementById("head1").style.display = 'block';
+            document.getElementById("arrowbox1").style.visibility = 'hidden';
+        }
+        function arrowdisplay2() {
+            document.getElementById("head2").style.display = 'none';
+            document.getElementById("arrowbox2").style.visibility = 'visible';
+        }
+        function textdisplay2() {
+            document.getElementById("head2").style.display = 'block';
+            document.getElementById("arrowbox2").style.visibility = 'hidden';
+        }
+    </script>
+</body>
+
+</html>
